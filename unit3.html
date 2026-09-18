@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>單元 3：教學影片製作｜數位教材製作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="sitename" href="index.html">數位教材製作</a>
+    <a href="unit1.html">課程規劃</a>
+    <a href="unit2.html">教材與簡報</a>
+    <a class="here" href="unit3.html">教學影片</a>
+    <a href="unit4.html">互動式練習</a>
+    <a href="unit5.html">發布上線</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <h1>教學影片製作</h1>
+  <p class="eyebrow">單元 3 · 預計 120 分鐘</p>
+
+  <div class="note">
+    <p><strong>完成本單元後，你可以：</strong></p>
+    <ul>
+      <li>寫出適合唸出來的講稿，而不是寫給眼睛看的文章</li>
+      <li>完成一段畫面清楚、聲音乾淨的螢幕錄影</li>
+      <li>加上字幕並把影片嵌入網頁</li>
+    </ul>
+  </div>
+
+  <h2>影片長度：一支講一件事</h2>
+  <p>教學影片控制在三到六分鐘，超過的就拆開。短影片的好處不只是專注度，還有維護成本：內容要改的時候，你只要重錄那一支，而不是整段四十分鐘重來。</p>
+
+  <h2>寫講稿</h2>
+  <p>講稿要寫成「說出來會順」的句子，所以要短、要口語、少用書面語。寫完一定要唸一次，唸到卡住的地方就是要改的地方。</p>
+  <p>每支影片的開頭 15 秒要講清楚兩件事：這支影片要做什麼，做完會得到什麼。結尾則用一句話總結，並帶到下一步。</p>
+
+  <h2>螢幕錄影</h2>
+  <ul>
+    <li><strong>解析度設 1920×1080</strong>，並把螢幕縮放調大或字體加大，錄出來在手機上才看得清楚。</li>
+    <li><strong>清理桌面</strong>：關掉通知、關掉無關分頁、瀏覽器換成無痕視窗，避免個人資料入鏡。</li>
+    <li><strong>滑鼠慢一點</strong>。你知道下一步要點哪裡，觀眾不知道。移動到目標後停半秒再點。</li>
+    <li><strong>分段錄</strong>。講錯就停下來重錄那一段，不要期待一鏡到底。</li>
+  </ul>
+  <p>免費工具：OBS Studio（功能完整）、Windows 內建的錄影工具、macOS 的 QuickTime。剪輯可用 Clipchamp 或 DaVinci Resolve。</p>
+
+  <h2>聲音比畫面重要</h2>
+  <p>觀眾可以忍受畫面普通，但忍不了雜音與忽大忽小的音量。用耳機麥克風就比筆電內建好很多；錄音時關窗、關冷氣與風扇，麥克風放在嘴巴側邊約 15 公分，避免噴麥。</p>
+  <p>如果不想自己錄旁白，也可以用 AI 語音合成。要注意語速常常偏快，專有名詞容易唸錯，記得完整聽過一次再用。</p>
+
+  <h2>字幕</h2>
+  <p>字幕不是加分項目，是基本配備：很多人在安靜或吵雜的環境下用無聲觀看，聽障學習者也需要它。現在的做法是先用自動辨識產生字幕（YouTube 內建、剪映、Whisper 都可以），再人工校對專有名詞與標點。</p>
+
+  <h2>把影片放進網頁</h2>
+  <p>影片檔很大，不要直接放進網站資料夾，否則載入會很慢，GitHub Pages 也有容量限制。建議上傳到 YouTube（可設為「不公開」，只有拿到連結的人看得到），再嵌入網頁：</p>
+  <pre><code>&lt;div class="video-box"&gt;
+  &lt;iframe src="https://www.youtube.com/embed/影片ID"
+          title="單元 3 示範影片" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+  <p>外層的 <code>video-box</code> 會讓影片自動維持 16:9，手機上也不會跑版。把上面的程式碼貼到這裡試試看：</p>
+  <div class="video-box"></div>
+  <p class="eyebrow">（這個灰色區塊就是影片的位置，等你有影片 ID 再換掉。）</p>
+
+  <h2>本單元練習</h2>
+  <p>針對單元 2 的其中一頁投影片，錄一支三分鐘內的教學影片，含旁白與字幕，並嵌入這個頁面。</p>
+
+  <div class="note">
+    <p><strong>怎麼請 AI 幫忙</strong>：把投影片內容貼給 AI，請它「改寫成口語講稿，句子不超過 25 字，總長度約三分鐘」。字幕校對完後，也可以請 AI 從字幕檔整理成文字版摘要，附在影片下方給想用讀的人。</p>
+  </div>
+
+  <nav class="pager">
+    <a href="unit2.html">← 上一單元：教材與簡報製作</a>
+    <a href="unit4.html">下一單元：互動式練習 →</a>
+  </nav>
+
+</main>
+
+<footer>
+  <div class="wrap">數位教材製作 · 單元 3</div>
+</footer>
+
+</body>
+</html>

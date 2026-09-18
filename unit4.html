@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>單元 4：互動式練習｜數位教材製作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="sitename" href="index.html">數位教材製作</a>
+    <a href="unit1.html">課程規劃</a>
+    <a href="unit2.html">教材與簡報</a>
+    <a href="unit3.html">教學影片</a>
+    <a class="here" href="unit4.html">互動式練習</a>
+    <a href="unit5.html">發布上線</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <h1>互動式練習</h1>
+  <p class="eyebrow">單元 4 · 預計 120 分鐘</p>
+
+  <div class="note">
+    <p><strong>完成本單元後，你可以：</strong></p>
+    <ul>
+      <li>設計能檢核學習目標的選擇題</li>
+      <li>在網頁上做出會即時回饋的測驗</li>
+      <li>寫出讓學習者知道下一步的回饋文字</li>
+    </ul>
+  </div>
+
+  <h2>為什麼教材需要練習</h2>
+  <p>只看不做，學習者會高估自己的理解程度。練習的價值不在打分數，而在讓學習者自己發現「我以為我懂了，但其實沒有」，而且是在還有機會補救的時候發現。</p>
+  <p>所以放練習的時機很重要：每講完一個觀念就練一題，比整堂課結束才考十題有效得多。</p>
+
+  <h2>好題目與壞題目</h2>
+  <ul>
+    <li><strong>對準學習目標</strong>。目標是「能修正投影片問題」，題目就該給一張有問題的投影片讓人判斷，而不是問「投影片設計原則有幾項」。</li>
+    <li><strong>錯誤選項要是真的會犯的錯</strong>。明顯荒謬的選項等於送分，測不出任何東西。</li>
+    <li><strong>不要考記憶細節</strong>，考的是判斷與應用。</li>
+  </ul>
+
+  <h2>回饋要說明為什麼</h2>
+  <p>「答錯了」對學習沒有幫助。好的回饋要做兩件事：說明正確答案背後的原理，以及指出這個誤解常見在哪裡。答對時也要給回饋，確認他是真的懂，而不是猜對的。</p>
+
+  <h2>實際試一題</h2>
+  <p>下面是可以直接運作的練習題，點選項就會看到結果。這一段的程式碼在本頁最下方，你可以照著改成自己的題目。</p>
+
+  <div class="quiz" id="quiz">
+
+    <div class="q" data-answer="1" data-why="重點在於學習者做得到什麼，可以被觀察、被檢核；「了解」「熟悉」都無法判斷是否達成。">
+      <p>1. 下列哪一個是可以被檢核的學習目標？</p>
+      <button type="button">了解數位教材的重要性</button>
+      <button type="button">能列出一支教學影片中三個影響理解的問題並提出修改</button>
+      <button type="button">熟悉影片剪輯軟體的各項功能</button>
+      <p class="feedback" role="status"></p>
+    </div>
+
+    <div class="q" data-answer="2" data-why="短影片除了維持專注度，更大的好處是維護成本低：內容要更新時只需重錄那一小段。">
+      <p>2. 教學影片為什麼建議控制在三到六分鐘？</p>
+      <button type="button">因為平台限制影片長度</button>
+      <button type="button">因為長影片的畫質一定比較差</button>
+      <button type="button">因為專注度較高，而且日後只要重錄需要修改的那一段</button>
+      <p class="feedback" role="status"></p>
+    </div>
+
+    <div class="q" data-answer="0" data-why="alt 是給螢幕報讀軟體與圖片載入失敗時使用的替代文字；壓縮檔案和圖說是不同的事。">
+      <p>3. 網頁圖片的 alt 文字主要用途是什麼？</p>
+      <button type="button">讓看不見圖片的人也能理解內容</button>
+      <button type="button">讓圖片檔案變小、載入更快</button>
+      <button type="button">顯示在圖片下方當作圖說</button>
+      <p class="feedback" role="status"></p>
+    </div>
+
+  </div>
+
+  <p id="score" class="eyebrow"></p>
+
+  <h2>這段程式碼在做什麼</h2>
+  <p>你不需要會寫，但看懂邏輯後就能自己改題目。規則只有三條：</p>
+  <ul>
+    <li>每一題外面包一個 <code>&lt;div class="q"&gt;</code>，用 <code>data-answer</code> 記錄正確答案是第幾個選項，<strong>從 0 開始數</strong>。所以 <code>data-answer="1"</code> 代表第二個選項是對的。</li>
+    <li>每個選項是一個 <code>&lt;button&gt;</code>，直接改裡面的文字就是改選項。</li>
+    <li>要加題目，就整塊 <code>&lt;div class="q"&gt;...&lt;/div&gt;</code> 複製一份再改內容，程式碼不用動。</li>
+  </ul>
+
+  <h2>本單元練習</h2>
+  <p>為你自己的其中一個單元寫三題選擇題，放進這個頁面，並為每一題寫出答對與答錯時的回饋。寫完後找一個不熟悉這個主題的人實際做一次，看他卡在哪裡。</p>
+
+  <div class="note">
+    <p><strong>怎麼請 AI 幫忙</strong>：把單元內容與學習目標貼給 AI，請它「出三題應用型選擇題，錯誤選項要是初學者真的會有的誤解，並附上每個選項為什麼對或錯」。AI 出的題目常常偏記憶型，記得自己篩過一輪。</p>
+  </div>
+
+  <nav class="pager">
+    <a href="unit3.html">← 上一單元：教學影片製作</a>
+    <a href="unit5.html">下一單元：GitHub Pages 發布 →</a>
+  </nav>
+
+</main>
+
+<footer>
+  <div class="wrap">數位教材製作 · 單元 4</div>
+</footer>
+
+<script>
+  // 找出頁面上所有題目
+  var questions = document.querySelectorAll('#quiz .q');
+  var answered = 0;
+  var correct = 0;
+
+  questions.forEach(function (q) {
+    var right = Number(q.dataset.answer);          // 正確答案的編號
+    var options = q.querySelectorAll('button');
+    var feedback = q.querySelector('.feedback');
+
+    options.forEach(function (btn, index) {
+      btn.addEventListener('click', function () {
+        if (q.dataset.done) return;                // 已經作答過就不再反應
+        q.dataset.done = 'yes';
+        answered++;
+
+        // 標示正確答案，並標出使用者選錯的那一個
+        options[right].classList.add('right');
+        if (index !== right) btn.classList.add('wrong');
+        if (index === right) correct++;
+
+        var why = q.dataset.why || '';
+        feedback.textContent = (index === right)
+          ? '答對了。' + why
+          : '答錯了，正確答案已標示。' + why;
+
+        if (answered === questions.length) {
+          document.getElementById('score').textContent =
+            '你完成了 ' + questions.length + ' 題，答對 ' + correct + ' 題。';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

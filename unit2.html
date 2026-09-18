@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>單元 2：教材與簡報製作｜數位教材製作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="sitename" href="index.html">數位教材製作</a>
+    <a href="unit1.html">課程規劃</a>
+    <a class="here" href="unit2.html">教材與簡報</a>
+    <a href="unit3.html">教學影片</a>
+    <a href="unit4.html">互動式練習</a>
+    <a href="unit5.html">發布上線</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <h1>教材與簡報製作</h1>
+  <p class="eyebrow">單元 2 · 預計 120 分鐘</p>
+
+  <div class="note">
+    <p><strong>完成本單元後，你可以：</strong></p>
+    <ul>
+      <li>把章節大綱展開成可以照著講的教學內容</li>
+      <li>做出一份閱讀負擔低的投影片</li>
+      <li>在教材中正確插入圖片、圖表與程式碼範例</li>
+    </ul>
+  </div>
+
+  <h2>先寫內容，再做投影片</h2>
+  <p>直接打開 PowerPoint 開始排版，通常會變成邊做邊想，結果是十幾頁漂亮但講不清楚的投影片。順序應該反過來：先用純文字把每一段要講的話寫出來，確認邏輯通順，再決定哪些內容需要視覺呈現。</p>
+  <p>每一段內容用同一個結構寫，學習者比較容易跟上：<strong>為什麼要學這個 → 怎麼做 → 看一個實例 → 常見錯誤</strong>。</p>
+
+  <h2>投影片的三個基本原則</h2>
+  <ul>
+    <li><strong>一頁一個重點</strong>。如果一頁需要講超過兩分鐘，就該拆開。</li>
+    <li><strong>投影片不是講稿</strong>。螢幕上放關鍵字與圖，完整句子留在備忘稿裡。滿滿的字會讓學習者忙著讀，沒空聽。</li>
+    <li><strong>字要夠大</strong>。內文 24pt 以上；影片會被壓縮，手機上看更小。</li>
+  </ul>
+
+  <h2>加入圖片與圖表</h2>
+  <p>圖片是用來降低理解成本的，不是用來填空白。放進教材前先問：拿掉這張圖，學習者會不會比較難懂？如果不會，那就拿掉。</p>
+  <ul>
+    <li>流程、步驟 → 流程圖</li>
+    <li>比例、組成 → 圓餅圖或堆疊長條圖</li>
+    <li>隨時間變化 → 折線圖</li>
+    <li>項目比較 → 長條圖</li>
+  </ul>
+  <p>網頁上的圖片要先壓縮（用 TinyPNG 之類的工具），寬度 1200 像素通常就夠，否則手機上載入會很慢。每張圖都要寫 <code>alt</code> 文字，這是給看不見圖片的人用的：</p>
+  <pre><code>&lt;figure&gt;
+  &lt;img src="images/flow.png" alt="教材製作流程：規劃、製作、錄影、測驗、發布"&gt;
+  &lt;figcaption&gt;圖 1：數位教材的五個階段&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+  <h2>放入程式碼範例</h2>
+  <p>程式碼要用 <code>&lt;pre&gt;&lt;code&gt;</code> 包起來，瀏覽器才會保留縮排與換行。注意程式碼裡的小於符號要寫成 <code>&amp;lt;</code>，否則瀏覽器會把它當成標籤：</p>
+  <pre><code>&lt;pre&gt;&lt;code&gt;print("Hello, world!")&lt;/code&gt;&lt;/pre&gt;</code></pre>
+  <p>範例要能直接複製執行。不完整、跑不動的程式碼比沒有範例更糟。</p>
+
+  <h2>素材的授權</h2>
+  <p>從網路抓圖放進教材，尤其是要公開發布的教材，是很常見的踩雷點。安全的做法：使用 Unsplash、Pexels 這類明確授權的圖庫，或標示 CC 授權的素材，並依規定註明出處。自己截圖、自己畫的圖最安全。</p>
+
+  <h2>本單元練習</h2>
+  <p>挑單元 1 規劃表中的其中一章，寫出完整教學內容，並做成 8 到 12 頁的投影片，其中至少包含一張圖表與一個範例。</p>
+
+  <div class="note">
+    <p><strong>怎麼請 AI 幫忙</strong>：把你寫好的教學內容貼給 AI，請它「依照一頁一重點的原則，切分成投影片大綱，每頁給標題、三個以內的要點，以及備忘稿講稿」。有了大綱再進 PowerPoint 排版，速度會快很多。</p>
+  </div>
+
+  <nav class="pager">
+    <a href="unit1.html">← 上一單元：課程規劃</a>
+    <a href="unit3.html">下一單元：教學影片製作 →</a>
+  </nav>
+
+</main>
+
+<footer>
+  <div class="wrap">數位教材製作 · 單元 2</div>
+</footer>
+
+</body>
+</html>

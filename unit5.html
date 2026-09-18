@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>單元 5：GitHub Pages 發布｜數位教材製作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="sitename" href="index.html">數位教材製作</a>
+    <a href="unit1.html">課程規劃</a>
+    <a href="unit2.html">教材與簡報</a>
+    <a href="unit3.html">教學影片</a>
+    <a href="unit4.html">互動式練習</a>
+    <a class="here" href="unit5.html">發布上線</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <h1>GitHub Pages 發布</h1>
+  <p class="eyebrow">單元 5 · 預計 90 分鐘</p>
+
+  <div class="note">
+    <p><strong>完成本單元後，你可以：</strong></p>
+    <ul>
+      <li>把整個課程資料夾變成一個公開網址</li>
+      <li>更新內容並讓線上版本同步更新</li>
+      <li>用一份檢查清單確認網站在手機上也能正常使用</li>
+    </ul>
+  </div>
+
+  <h2>上線前先整理資料夾</h2>
+  <p>GitHub Pages 會照你資料夾的結構原封不動放到網路上，所以檔名要乾淨：全部小寫、不要有空格、不要用中文檔名。首頁一定要叫 <code>index.html</code>，這是網址根目錄預設開啟的檔案。</p>
+  <pre><code>mycourse/
+├── index.html      ← 首頁
+├── style.css       ← 共用外觀
+├── unit1.html … unit5.html
+└── images/         ← 圖片放這裡</code></pre>
+
+  <h2>發布步驟</h2>
+  <ol>
+    <li>註冊 GitHub 帳號並登入。</li>
+    <li>點右上角的 <strong>+</strong> → <strong>New repository</strong>，名稱填 <code>mycourse</code>，選 <strong>Public</strong>，建立。</li>
+    <li>在新的 repository 頁面點 <strong>uploading an existing file</strong>，把資料夾裡的所有檔案拖進去，然後按 <strong>Commit changes</strong>。</li>
+    <li>進入 <strong>Settings</strong> → 左側 <strong>Pages</strong>，Source 選 <strong>Deploy from a branch</strong>，分支選 <code>main</code>、資料夾選 <code>/ (root)</code>，按 Save。</li>
+    <li>等一到兩分鐘重新整理，頁面上方會出現你的網址，格式是 <code>https://你的帳號.github.io/mycourse/</code>。</li>
+  </ol>
+
+  <div class="note">
+    <p><strong>最常見的兩個問題</strong>：畫面沒有樣式，通常是 <code>style.css</code> 沒有一起上傳，或檔名大小寫不符；圖片破圖，通常是路徑寫成 <code>Images/</code> 但實際資料夾是 <code>images/</code>。在自己電腦上打開看起來正常，是因為 Windows 不分大小寫，但伺服器會分。</p>
+  </div>
+
+  <h2>更新內容</h2>
+  <p>改完檔案後，回到 repository 把新檔案上傳覆蓋，等一兩分鐘網站就會更新。如果看到的還是舊的，先用無痕視窗開一次，多半是瀏覽器快取。</p>
+
+  <h2>上線後的檢查清單</h2>
+  <ul>
+    <li>用手機開一次，確認文字不會太小、版面沒有橫向捲動</li>
+    <li>點過每一個導覽連結與上下單元連結，確認沒有 404</li>
+    <li>確認影片能播放、測驗能作答</li>
+    <li>圖片都有 alt 文字，影片都有字幕</li>
+    <li>把網址傳給一位目標學習者，看他在哪裡卡住</li>
+  </ul>
+
+  <h2>本單元練習</h2>
+  <p>把你的課程網站發布上線，取得公開網址，跑完上面的檢查清單，並依照試用者的回饋修改至少三個地方。</p>
+
+  <div class="note">
+    <p><strong>怎麼請 AI 幫忙</strong>：遇到錯誤畫面時，把整個錯誤訊息或截圖、加上你的檔案內容一起貼給 AI，說明「我完全不會寫程式，請告訴我要改哪一行、改成什麼」。描述得越具體，得到的答案越能直接用。</p>
+  </div>
+
+  <nav class="pager">
+    <a href="unit4.html">← 上一單元：互動式練習</a>
+    <a href="index.html">回課程首頁 →</a>
+  </nav>
+
+</main>
+
+<footer>
+  <div class="wrap">數位教材製作 · 單元 5</div>
+</footer>
+
+</body>
+</html>
