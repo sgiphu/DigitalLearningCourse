@@ -222,6 +222,39 @@ footer {
   font-size: 15px;
 }
 
+
+/* =========================
+Button
+========================= */
+
+.button {
+display: inline-block;
+
+```
+margin-top: 30px;
+
+padding: 12px 28px;
+
+background: #222;
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 5px;
+
+font-size: 14px;
+
+transition: 0.2s;
+```
+
+}
+
+.button:hover {
+background: #555;
+}
+
+
 /* ---------- 手機版調整 ---------- */
 @media (max-width: 600px) {
   body { font-size: 16px; }
